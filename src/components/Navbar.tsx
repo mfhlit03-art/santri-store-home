@@ -1,6 +1,7 @@
 import { ShoppingCart, Menu, X, Search, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import logoImg from '../../assets/logo.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,14 +19,22 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-emerald-light flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-lg">S</span>
-            </div>
-            <span className="font-display text-xl font-semibold text-foreground">
-              Santri<span className="text-gold">Store</span>
-            </span>
-          </a>
+          const Navbar = () => {
+  return (
+    <a href="#" className="flex items-center gap-2">
+      {/* 2. Gunakan variabel hasil import di src */}
+      <img 
+        src={logoImg} 
+        alt="SantriStore Logo" 
+        className="w-10 h-10 object-contain" 
+      />
+      
+      <span className="font-display text-xl font-semibold text-foreground">
+        Santri<span className="text-gold">Store</span>
+      </span>
+    </a>
+  );
+};
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
